@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="تعرف على الخدمات المتميزة التي يقدمها منتجع لوزيتانو للجولف من ملاعب احترافية ومرافق فاخرة.">
+  <title>منتجع هول أن ون  للجولف - الخدمات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script>
+
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <div class="translation-container">
+          <select id="lang-select" aria-label="اختيار اللغة">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="clock-container" id="current-times">
+          <span id="time-portugal"></span> | 
+          <span id="time-jordan"></span> | 
+          <span id="time-usa"></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">عن المنتجع</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="offers.html">العروض</a></li>
+          <li><a href="booking.html">الحجز</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+          <li><a href="store.html">المتجر</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="site-search" placeholder="ابحث عن الصفحات" list="pages" aria-label="محرك البحث">
+        <datalist id="pages">
+          <option value="عن المنتجع">
+          <option value="الخدمات">
+          <option value="الحجز">
+          <option value="العروض">
+          <option value="المتجر">
+        </datalist>
+        <button type="button" id="search-button" aria-label="بحث">بحث</button>
+      </div>
+      <div class="accessibility-panel" aria-label="لوحة الإتاحة">
+        <button id="increase-font" aria-label="زيادة حجم الخط">تكبير الخط</button>
+        <button id="decrease-font" aria-label="تصغير حجم الخط">تصغير الخط</button>
+        <button id="toggle-contrast" aria-label="تفعيل التباين العالي">تباين عالي</button>
+        <button id="reset-accessibility" aria-label="إعادة الإعدادات">إعادة الإعدادات</button>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- قسم Hero لصفحة الخدمات -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2 data-key="hero_sites_title">خدمات المنتجع</h2>
+        <p data-key="hero_sites_text">
+          استكشف باقة الخدمات الراقية التي نقدمها لتلبية كافة احتياجات ضيوفنا
+        </p>
+      </div>
+    </section>
+
+    <!-- قائمة الخدمات الرئيسية -->
+    <section class="content" id="services">
+      <h2 data-key="content_sites_title">خدمات المنتجع</h2>
+      <ul class="sites-list">
+        <li>
+          <h2>ملعب جولف احترافي</h2>
+          <p>ملعب بمواصفات عالمية مع صيانة دورية ومساحات خضراء واسعة</p>
+        </li>
+        <li>
+          <h2>إقامات فاخرة</h2>
+          <p>خيارات إقامة راقية مع وسائل راحة متكاملة</p>
+        </li>
+        <li>
+          <h2>مطاعم راقية</h2>
+          <p>تجربة تناول طعام مميزة مع قوائم طعام عالمية ومحلية</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- قسم الملاعب -->
+    <section class="content" id="courses">
+      <h2>الملاعب</h2>
+      <ul class="sites-list">
+        <li>
+          <img src="img/g15.jpg" alt="ملعب جولف سي فيو">
+          <h3>ملعب جولف 1</h3>
+          <p>يتميز ملعب "سي فيو للجولف" بتصميمه الفريد، حيث يضم 18 حفرة مع ممرات عشبية ناعمة، مخابئ رملية وإطلالة بانورامية</p>
+        </li>
+        <li>
+          <img src="img/g14.jpg" alt="ملعب جولف 2">
+          <h3>ملعب جولف 2</h3>
+          <p>مساحات واسعة وتجهيزات متطورة لتحديات احترافية.</p>
+        </li>
+        <li>
+          <img src="img/33.webp" alt="ملعب جولف 2">
+          <h3>ملعب جولف 2</h3>
+          <p>يمتد الملعب على مساحات خضراء شاسعة محاطة بالتلال والمناظر الطبيعية الخلابة، مما يوفر تجربة لعب استثنائية تناسب اللاعبين من جميع المستويات، سواء المبتدئين أو المحترفين</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- قسم المطاعم والاستراحات -->
+    <section class="content" id="dining">
+      <h2>المطاعم والمقاهي</h2>
+      <ul class="sites-list">
+        <li>
+          <img src="img/g13.webp" alt="مطعم المنتجع">
+          <h3>مطعم المنتجع</h3>
+          <p>تجربة طعام فاخرة مع قائمة عالمية ومحلية</p>
+        </li>
+        <li>
+          <img src="img/g11.avif" alt="استراحة المنتجع">
+          <h3>مقاهي المنتجع</h3>
+          <p>مساحة استرخاء مميزة مع إطلالات خلابة</p>
+        </li>
+      </ul>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p data-key="footer_text">© 2025 منتجع هول أن ون للجولف - جميع الحقوق محفوظة</p>
+    <nav role="navigation" aria-label="روابط التذييل">
+     
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

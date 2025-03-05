@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="اكتشف آخر العروض والحزم المميزة في منتجع لوزيتانو للجولف.">
+  <title>منتجع  للجولف - آخر العروض</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- إذا لم تكن بحاجة إلى jQuery يمكنك حذفه -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    (function() {
+      var savedLang = localStorage.getItem('language') || 'ar';
+      document.documentElement.lang = savedLang;
+      document.documentElement.dir = (savedLang === 'en' || savedLang === 'pt') ? 'ltr' : 'rtl';
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <div class="translation-container">
+          <select id="lang-select" aria-label="اختيار اللغة">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="clock-container" id="current-times">
+          <span id="time-portugal"></span> | 
+          <span id="time-jordan"></span> | 
+          <span id="time-usa"></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">عن المنتجع</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="offers.html">العروض</a></li>
+          <li><a href="booking.html">الحجز</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+          <li><a href="store.html">المتجر</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="site-search" placeholder="ابحث عن الصفحات" list="pages" aria-label="محرك البحث">
+        <datalist id="pages">
+          <option value="عن المنتجع">
+          <option value="الخدمات">
+          <option value="الحجز">
+          <option value="العروض">
+          <option value="المتجر">
+        </datalist>
+        <button type="button" id="search-button" aria-label="بحث">بحث</button>
+      </div>
+      <div class="accessibility-panel" aria-label="لوحة الإتاحة">
+        <button id="increase-font" aria-label="زيادة حجم الخط">تكبير الخط</button>
+        <button id="decrease-font" aria-label="تصغير حجم الخط">تصغير الخط</button>
+        <button id="toggle-contrast" aria-label="تفعيل التباين العالي">تباين عالي</button>
+        <button id="reset-accessibility" aria-label="إعادة الإعدادات">إعادة الإعدادات</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- قسم Hero لصفحة العروض -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2 data-key="hero_offers_title">اكتشف عروضنا الفريدة</h2>
+        <p data-key="hero_offers_text">
+          تمتع بتجربة لا مثيل لها مع باقاتنا المصممة خصيصاً لتلبية احتياجاتك.
+        </p>
+      </div>
+    </section>
+
+    <!-- قسم العروض -->
+    <section class="content" id="offers">
+      <h2 data-key="content_offers_title">عروض الحزم</h2>
+      <ul class="sites-list">
+        <li>
+          <img src="img/g7.avif" alt="باقة جولف فاخرة">
+          <h3>باقة جولف فاخرة</h3>
+          <p>إقامة كاملة لمدة خمس ليالٍ في جناح فاخر، خمس جولات على ملعب "سي فيو"، جلسة تدريب رقمية مجانية وتأجير نادي مجاني</p>
+          <div class="book-now-container" style="text-align: center; margin-top: 20px;">
+            <a href="contact.html" class="button" data-key="btn_book_now">احجز الان</a>
+          </div>
+        </li>
+        <li>
+          <img src="img/استجمام.jpg" alt="باقة استجمام">
+          <h3>باقة استجمام</h3>
+          <p>إقامة لليلة واحدة مع وجبة إفطار كاملة، عشاء في مطعم المنتجع وخصم 20% في متجر المحترفين</p>
+          <div class="book-now-container" style="text-align: center; margin-top: 20px;">
+            <a href="contact.html" class="button" data-key="btn_book_now">احجز الان</a>
+          </div>
+        </li>
+        <li>
+          <img src="img/g9.avif" alt="باقة تدريب متكاملة">
+          <h3>باقة تدريب متكاملة</h3>
+          <p>جولة واحدة مضمونة على ملعب "سي فيو"، جلسة تدريب رقمية مجانية ودروس جولف مع مدربين محترفين</p>
+          <div class="book-now-container" style="text-align: center; margin-top: 20px;">
+            <a href="contact.html" class="button" data-key="btn_book_now">احجز الان</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p data-key="footer_text">© 2025 منتجع للجولف - جميع الحقوق محفوظة</p>
+    <nav role="navigation" aria-label="روابط التذييل">
+      
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

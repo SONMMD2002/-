@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="متجر هول أن ون للجولف">
+  <title>المتجر - هول أن ون للجولف</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="accessibility.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    /* تنسيق شبكة المنتجات بحيث تكون 3 أعمدة */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    /* تنسيق كل منتج */
+    .product {
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    /* الصور بحجم ثابت وتعبئة المحتوى */
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    /* تنسيق الحاوية الرئيسية للمتجر بحيث تُرتب المنتجات وسلة المشتريات بجانب بعضها */
+    .store-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .products-section, .cart-section {
+      flex: 1;
+      min-width: 300px;
+    }
+    .cart-section {
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      height: fit-content;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-top" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div class="translation-container">
+            <select id="lang-select" aria-label="اختيار اللغة">
+              <option value="ar">العربية</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+          <div class="clock-container" id="current-times">
+            <span id="time-portugal"></span> | 
+            <span id="time-jordan"></span> | 
+            <span id="time-usa"></span>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">عن المنتجع</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="offers.html">العروض</a></li>
+          <li><a href="booking.html">الحجز</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+          <li><a href="store.html" class="active">المتجر</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="site-search" placeholder="ابحث عن الصفحات" list="pages" aria-label="محرك البحث">
+        <datalist id="pages">
+          <option value="عن المنتجع">
+          <option value="الخدمات">
+          <option value="الحجز">
+          <option value="العروض">
+          <option value="المتجر">
+        </datalist>
+        <button type="button" id="search-button" aria-label="بحث">بحث</button>
+      </div>
+      <div class="accessibility-panel" aria-label="لوحة الإتاحة">
+        <button id="increase-font" aria-label="زيادة حجم الخط">تكبير الخط</button>
+        <button id="decrease-font" aria-label="تصغير حجم الخط">تصغير الخط</button>
+        <button id="toggle-contrast" aria-label="تفعيل التباين العالي">تباين عالي</button>
+        <button id="reset-accessibility" aria-label="إعادة الإعدادات">إعادة الإعدادات</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="store-container">
+      <!-- قسم المنتجات -->
+      <div class="products-section">
+        <h2>المنتجات</h2>
+        <div class="products-grid">
+          <!-- منتج 1: عصا جولف -->
+          <div class="product">
+            <img src="img/حذاء جولف.jpg" alt="حذاء جولف">
+            <h3>حذاء جولف</h3>
+            <p>السعر: 100 دولار</p>
+            <button onclick="addToCart('حذاء جولف', 100)">أضف إلى السلة</button>
+          </div>
+          <!-- منتج 2: كرة جولف -->
+          <div class="product">
+            <img src="img/كرة جولف.jpg" alt="كرة جولف">
+            <h3>كرة جولف</h3>
+            <p>السعر: 50 دولار</p>
+            <button onclick="addToCart('كرة جولف', 50)">أضف إلى السلة</button>
+          </div>
+          <!-- منتج 3: كرة جولف بديلة -->
+          <div class="product">
+            <img src="img/حقيبة جولف.jpg" alt="  حقيبة معدات جولف">
+            <h3>كرة جولف</h3>
+            <p>السعر: 350 دولار</p>
+            <button onclick="addToCart('حقيبة أدوات جولف', 350)">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- قسم سلة المشتريات -->
+      <div class="cart-section">
+        <h2>سلة المشتريات</h2>
+        <div id="cart-items">
+          <!-- سيتم عرض المنتجات المضافة هنا -->
+        </div>
+        <div id="cart-total"></div>
+        <button onclick="checkoutCart()">اتمام الشراء</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 هول أن ون للجولف - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

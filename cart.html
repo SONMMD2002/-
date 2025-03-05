@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="سلة المشتريات - متجر هول أن ون للجولف">
+  <title>سلة المشتريات - هول أن ون للجولف</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- التنسيقات الأصلية -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="script" href="script.js">
+  <!-- التنسيقات الخاصة بميزات الإتاحة -->
+  <link rel="stylesheet" href="accessibility.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <div class="translation-container">
+          <select id="lang-select" aria-label="اختيار اللغة">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="clock-container" id="current-times">
+          <span id="time-portugal"></span> | 
+          <span id="time-jordan"></span> | 
+          <span id="time-usa"></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">عن المنتجع</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="offers.html">العروض</a></li>
+          <li><a href="booking.html">الحجز</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+          <li><a href="store.html">المتجر</a></li>
+          <li><a href="cart.html" class="active">سلة المشتريات</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="site-search" placeholder="ابحث عن الصفحات" list="pages" aria-label="محرك البحث">
+        <datalist id="pages">
+          <option value="عن المنتجع">
+          <option value="الخدمات">
+          <option value="الحجز">
+          <option value="العروض">
+          <option value="المتجر">
+        </datalist>
+        <button type="button" id="search-button" aria-label="بحث">بحث</button>
+      </div>
+      <div class="accessibility-panel" aria-label="لوحة الإتاحة">
+        <button id="increase-font" aria-label="زيادة حجم الخط">تكبير الخط</button>
+        <button id="decrease-font" aria-label="تصغير حجم الخط">تصغير الخط</button>
+        <button id="toggle-contrast" aria-label="تفعيل التباين العالي">تباين عالي</button>
+        <button id="reset-accessibility" aria-label="إعادة الإعدادات">إعادة الإعدادات</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container cart-page">
+    <h1>سلة المشتريات</h1>
+    <div id="cart-items"></div>
+    <div id="cart-total"></div>
+    <button onclick="clearCart()">إفراغ السلة</button>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 هول أن ون للجولف - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
